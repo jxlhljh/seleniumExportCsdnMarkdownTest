@@ -1,0 +1,8 @@
+#导出markdown的本地文件夹
+exportDir: "C:/software/Temp"
+#是否需要下载文章中的图片到本地并替换Image引入本地图片，默认不配置为false
+downImageAndGenerateNewFile: true
+#csdn登陆账号
+csdnUserName: jxxxx
+#csdn登陆密码
+csdnPwd: 1xxxx
