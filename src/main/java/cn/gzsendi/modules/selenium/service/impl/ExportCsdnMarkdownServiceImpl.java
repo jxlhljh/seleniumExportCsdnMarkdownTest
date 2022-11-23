@@ -218,6 +218,11 @@ public class ExportCsdnMarkdownServiceImpl implements ExportCsdnMarkdownService{
 		linkTextLoginAndRegister.click();
 		Thread.sleep(5000l);
 		
+		//最新版本的csdn使用了iframe进行登陆表单的显示，因为先找到iframe，然后切换到iframe后才能继续
+		WebElement iframeElement = webDriver.findElement(By.cssSelector("iframe[name=passport_iframe]"));
+		webDriver.switchTo().frame(iframeElement);
+		Thread.sleep(2000l);
+		
 		//找到密码登陆，点击一下
 		WebElement pwdLoginText = webDriver.findElement(By.cssSelector("div.login-box-tabs > div.login-box-tabs-items > span:nth-child(4)"));
 		pwdLoginText.click();
